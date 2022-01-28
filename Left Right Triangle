@@ -1,0 +1,25 @@
+#include <cs50.h>
+#include <stdio.h>
+
+int main(void)
+{
+    int lines;
+    do
+    {
+    lines = get_int("Enter the numbers of lines");
+    }
+    while(lines<1 ||lines>8);
+    
+    for(int counterLines =1;counterLines<=lines;counterLines++)
+    {
+        for(int counterSpaces =lines;counterSpaces>=counterLines;counterSpaces--)
+        {
+            printf(" ");
+        }
+        for(int counterHashtag =1;counterHashtag<=counterLines;counterHashtag++)
+        {
+            printf("#");
+        }
+        printf(" \n");
+    }
+}
